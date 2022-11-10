@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         /*
+            Zadanie - lista pracowników w tablicą obiektu company 
+            1) Stwórz obiekt company z danymi firmy podzielonymi
+               na nazwę: Example Ltd, ulicę: Wilcza, city: Wawa.
+               Uwaga dodatkowo obiekt company musi mieć pustą
+               tablicę o nazwie employees. 
+            2) Napisz funkcję addEmployee(name, email, job)
+               gdzie na podstawie parametrów utworzysz obiekt
+               użytkownika. Obiekt ten dodaj do tablicy employees
+               znajdujący się w obiekcie company, użyj do tego push()
+            3) Dodaj trzech dowolnych pracowników
+            4) Pokaż obiekt company w konsoli 
+        */
+
+
+        const company = {
+            name: "Example Ltd.",
+            street: "Wilcza",
+            city: "Warszawa",
+            employee: [],
+        };
+        function addEmployee(name,email,job){
+            let newEmployee = {
+                name: name,
+                email: email,
+                job: job,
+            };
+            company.employee.push(newEmployee);
+        }
+
+        addEmployee("Miłodziad","milydziadek@example.com","Dojarz węży");
+        addEmployee("Dziadumiła","dziadumilka@example.com","Upychacz pasażerów");
+        addEmployee("Cirzpisława","cirzpunia@example.com","Tester psiej karmy");
+    </script>
+</body>
+</html>
