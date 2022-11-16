@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Zadanie na Number:
+        1) pobierz liczbę całkowitą od użytkownika do zmiennej
+           za pomocą funkcji prompt z informacją: Podaj liczbę całkowitą.
+        2) Wyświetl typ zwracanej wartości w konsoli
+        3) Zmień typ wartości z tekstu na liczbę całkowitą
+           Wyświetl w konsoli typ po zmianie.
+        4) Stwórz funkcję calculateSquareArea z parametrem height
+           która zwraca powierzchnią kwadratu.
+        5) Wywołaj funkcję z wcześniej pobraną liczbą całkowitą,
+           wynik pokaż w konsoli.
+        6) Pobierz od użytkownika liczbę dziesiętną, pamiętaj o kropce
+           w liczbie. Oblicz powierzchnię kwadratu z tą wartością i
+           pokaż wynik w konsoli zaokrąglony do 2 miejsc po przecinku. 
+        */
+
+        let num1 = prompt("Enter an integer");
+        let num2 = prompt("Enter a decimal number");
+        console.log("type of date: ",typeof(num1));
+        num1 = parseInt(num1);
+        console.log("type of date: ",typeof(num1));
+
+        function calculateSquareArea(height) {
+            return Math.pow(height,2);
+        }
+        console.log("Square Area = ", calculateSquareArea(num1));
+        console.log("Sqare Area with decimal number = ", calculateSquareArea(num2).toFixed(2));
+
+    </script>
+</body>
+</html>
